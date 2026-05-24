@@ -1,0 +1,118 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>TaskSphere</title>
+</head>
+<body>
+
+<h1>TaskSphere</h1>
+
+<h2>Register</h2>
+<input id="regName" placeholder="Nombre">
+<input id="regEmail" placeholder="Email">
+<input id="regTelephone" placeholder="Teléfono">
+<input id="regPassword" placeholder="Contraseña" type="password">
+<button id="registerBtn">Registrarse</button>
+<p id="registerResult"></p>
+
+<h2>Login</h2>
+<input id="loginEmail" placeholder="Email">
+<input id="loginPassword" placeholder="Contraseña" type="password">
+<button id="loginBtn">Iniciar Sesión</button>
+<p id="loginResult"></p>
+
+<h2>Users</h2>
+<input id="name" placeholder="Name">
+<input id="email" placeholder="Email">
+<input id="telephone" placeholder="Telephone">
+<button id="createUser">Create</button>
+
+<br><br>
+
+<input id="userId" placeholder="User ID">
+<button id="getUser">Get One</button>
+<button id="getAllUsers">Get All</button>
+
+<ul id="userResult"></ul>
+
+
+<h2>Tasks</h2>
+<input id="description" placeholder="Description">
+<input id="start_date" type="date">
+<input id="delivery_date" type="date">
+<input id="final_note" placeholder="Final Note">
+<button id="createTask">Create</button>
+
+<br><br>
+
+<input id="taskId" placeholder="Task ID">
+<button id="getTask">Get One</button>
+<button id="getAllTasks">Get All</button>
+
+<ul id="taskResult"></ul>
+
+
+<h2>Subjects</h2>
+<input id="subjectName" placeholder="Name">
+<input id="subjectUserId" placeholder="User ID">
+<button id="createSubject">Create</button>
+
+<br><br>
+
+<input id="subjectId" placeholder="Subject ID">
+<button id="getSubject">Get One</button>
+<button id="getAllSubjects">Get All</button>
+
+<ul id="subjectResult"></ul>
+
+<h2>Relation</h2>
+<input id="relSubjectId" placeholder="Subject ID">
+<input id="relTaskId" placeholder="Task ID">
+<input id="relUserId" placeholder="User ID">
+<button id="createRelation">Create</button>
+
+<br><br>
+
+<input id="relGetSubjectId" placeholder="Subject ID">
+<input id="relGetTaskId" placeholder="Task ID">
+<button id="getRelation">Get One</button>
+<button id="getAllRelations">Get All</button>
+
+<ul id="relationResult"></ul>
+
+<hr>
+<h2>Activity Logs (Firebase)</h2>
+
+<button id="getFirebaseLogs">Ver Todos los Logs</button>
+
+<br><br>
+
+<input id="filterEmail" placeholder="Email del usuario">
+<button id="getLogsByUser">Filtrar por Usuario</button>
+
+<br><br>
+
+<select id="filterAction">
+    <option value="">-- Selecciona acción --</option>
+    <option value="register">register</option>
+    <option value="login">login</option>
+    <option value="create_task">create_task</option>
+    <option value="create_subject">create_subject</option>
+    <option value="complete_task">complete_task</option>
+</select>
+<button id="getLogsByAction">Filtrar por Acción</button>
+
+<br><br>
+
+<input id="filterLimit" placeholder="Cantidad (ej: 5)" type="number" min="1" max="50">
+<button id="getRecentLogs">Ver Últimos N Eventos</button>
+
+<ul id="firebaseResult"></ul>
+
+<button id="runETL">Ejecutar ETL</button>
+<p id="etlResult"></p>
+
+<script type="module" src="js/sql.js"></script>
+</body>
+</html>
